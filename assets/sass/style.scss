@@ -1,0 +1,321 @@
+// 1. Importar variables iniciales
+@import "bulma/sass/utilities/initial-variables";
+@import "bulma/sass/utilities/functions";
+
+
+// 2. Variables que quieras cambiar de Bulma
+
+// Vistas
+// $mobile: 460px;
+// $tablet: 769px;
+// Colores
+$danger: #D80129;
+$grey: #e6e6e6;
+$info: rgba(255, 255, 255, 0.9);
+$link: #8a8a8a;
+$success: #4f5d6a;
+
+// Tamaño Fuente
+$size-1: 2.4rem;
+$size-2: 2rem;
+$size-3: 1.6rem;
+// $size-4: 1.5vw;
+// $size-5: 1vw;
+$size-6: 0.9rem;
+$size-7: 0.6rem; 
+
+// 3. Importar Bulma
+@import "bulma/bulma.sass";
+
+// Fuentes
+    @font-face {
+        font-family: 'GothamPro';
+        src: url('../css/fonts/GothamPro-Medium.ttf') format('truetype');
+        font-weight: 500;
+        font-style: normal;
+    }
+
+@font-face {
+    font-family: 'SinkinSans700';
+    src: url('../css/fonts/SinkinSans-700Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'MontserratMedium';
+    src: url('../css/fonts/Montserrat-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'MontserratThin';
+    src: url('../css/fonts/Montserrat-Thin.ttf') format('truetype');
+    font-weight: 100;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'MontserratHairline';
+    src: url('../css/fonts/Montserrat-Hairline.ttf') format('truetype');
+    font-weight: 200;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('../css/fonts/Montserrat-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'SinkinSans800';
+    src: url('../css/fonts/SinkinSans-800Black.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'SinkinSans300';
+    src: url('../css/fonts/SinkinSans-300Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+.GothamPM {
+    font-family: "GothamPro";
+}
+
+.S300Light {
+    font-family: "SinkinSans300";
+}
+
+.S700Bold {
+    font-family: "SinkinSans700";
+}
+
+.S800Black {
+    font-family: "SinkinSans800";
+}
+
+.MontHL {
+    font-family: "MontserratHairline";
+}
+
+.MontLT {
+    font-family: "Montserrat";
+}
+
+.MontMd {
+    font-family: "MontserratMedium";
+}
+
+.MontTh {
+    font-family: "MontserratThin";
+}
+
+.pie{
+    font-size:0.8rem;
+}
+
+.interlineado {
+    line-height: normal;
+}
+
+.descubre {
+    font-size: 1rem;
+}
+
+// fin fuentes
+
+.hero-body {
+    padding: 1.15rem 1.5rem;
+}
+
+.p-10 {
+    padding: 10px;
+}
+
+.pt-10 {
+    padding-top: 10px;
+}
+
+.pt-20 {
+    padding-top: 20px;
+}
+
+.pb-10 {
+    padding-bottom: 10px;
+}
+
+.alcuadrado{
+    vertical-align: super; font-size: 6px;
+}
+
+.pb-7 {
+    padding-bottom: 7px;
+}
+
+.pb-15 {
+    padding-bottom: 15px;
+}
+
+.pb-25 {
+    padding-bottom: 25px;
+}
+
+.mt-30 {
+    margin-top: 30 !important;
+}
+
+.mt-24 {
+    margin-top: -24px;
+}
+
+.mb-24 {
+    margin-bottom: 24px;
+}
+
+.pt-5 {
+    padding: 5px;
+}
+
+.descripcion{
+    padding-left: 10px;
+    padding-right: 20px;
+}
+
+.pboton{
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    
+}
+
+.radioBoton {
+    border-radius: 10px;
+}
+
+.pl-55 {
+    padding-left: 55px;
+}
+
+.pt-50 {
+    padding-top: 50px;
+}
+
+.divisora {
+    border-top: 1px solid white;
+    line-height: 2em;
+}
+
+.vivir {
+    font-size: 4rem;
+    border-top: 0.8px solid #D80129;
+    border-bottom: 0.8px solid #D80129;
+
+}
+
+.has-image-centered {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.precio {
+    font-size: 2.6rem;
+}
+
+.espacio-linea{
+    line-height:100%;
+}
+
+.espacio-letra{
+    letter-spacing: 1pt;
+}
+
+.bg-img {
+    background-image: url('../img/fondo.jpg');
+    background-position: left center;
+    background-repeat: no-repeat;
+//     background-attachment: absolute;
+//     background-size: 1920px 770px;
+    background-size: auto 593px;
+}
+
+.bg-color {
+    background-image: url('../img/franja.png');
+    background-size: auto auto;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.esquina{
+    border-bottom-right-radius: 50px;
+}
+
+.radio{
+    border-bottom-right-radius: 50px;
+}
+
+.box {
+    border-radius: 0;
+    padding:0;
+} 
+
+.fondo-negro {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    margin-bottom: 15px;
+} 
+
+.fondos {
+    padding-top: 15px;
+    padding-bottom: 15px;
+   
+}
+
+.proximo {
+    padding-top: 27px;
+    padding-bottom: 27px;
+}
+
+.transparencia {
+    opacity: 0.8;
+    background-color: #ffffff;    
+}
+
+.orden1 {
+    z-index: 1
+}
+
+.orden2 {
+    z-index: 2;
+}
+ 
+#contacto {
+    div{
+        div{
+            input{
+                border-top:0;
+                border-left: 0;
+                border-right: 0;
+                -webkit-box-shadow: none;
+            }
+        }
+    }
+}
+
+.cuadroMapa {
+    border-style: outset; border-width: 1px;
+}
+
+
+@media only screen and (max-width: 400px) {
+    .banda-negra {
+        margin-left: -31px;
+        margin-right: -31px;
+    }
+  } 
