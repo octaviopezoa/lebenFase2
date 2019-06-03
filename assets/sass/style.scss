@@ -203,6 +203,10 @@ $size-7: 0.6rem;
     padding-left: 55px;
 }
 
+.pl-15 {
+    padding-left: 15px;
+}
+
 .pt-50 {
     padding-top: 50px;
 }
@@ -259,6 +263,9 @@ $size-7: 0.6rem;
 .radio{
     border-bottom-right-radius: 50px;
 }
+.radio2{
+    border-bottom-right-radius: 30px;
+}
 
 .box {
     border-radius: 0;
@@ -311,11 +318,3 @@ $size-7: 0.6rem;
 .cuadroMapa {
     border-style: outset; border-width: 1px;
 }
-
-
-@media only screen and (max-width: 400px) {
-    .banda-negra {
-        margin-left: -31px;
-        margin-right: -31px;
-    }
-  } 
