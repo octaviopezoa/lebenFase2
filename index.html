@@ -17,11 +17,19 @@
   <style>
     .slick-prev{
       left: 15px;
+      z-index: 5;
     }
 
     .slick-next {
       right: 15px;
+      z-index: 5;
     }    
+
+    .slick-prev:before, .slick-next:before {
+      font-size: 30px;
+      opacity: .75;
+      color: #D80129;
+    }
 
     .slick-slider *{
       min-width: 0;
@@ -34,148 +42,228 @@
     }
 
     .slide__caption {
-      bottom: 0;
-      min-height: 80px;
+      top: 0;
+      /* min-height: 80px; */
       left: 0;
       position: absolute;
       width: 100%;
       z-index: 2;
+      opacity: 0.6;
+    }
+    
+    .slide__planos {      
+      height: 120px;
+      right: 0;
+      bottom: 10%;
+      position: absolute;
+      width: 35%;
+      z-index: 2;
+      /* opacity: 0.6; */
+    }
+
+    .navbar .navbar-brand {
+      text-align: center;
+      display: block;
+      width: 100%;
+    }
+
+    .navbar .navbar-brand > .navbar-item,
+    .navbar .navbar-brand .navbar-link {
+      display: inline-block;
     }
     
   </style>
 
   <body>
     
+    <div class="is-hidden-tablet">
+      <!-- mobile -->
+      <nav class="navbar is-fixed-top" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand is-centered">
+          <div class="has-text-centered-mobile"><img src="./assets/img/logo.png" width="250px" height="auto" style="padding:15px 0px;"></div>
+        </div>
+        <div class="tabs is-toggle is-fullwidth">
+          <ul>
+            <li>
+              <a id="btn_arg" class="Seravek has-background-success has-text-white">
+                <span >ARGOMEDO 380</span>
+              </a>
+            </li>
+            
+            <li>
+              <a id="btn_con" class="Seravek has-background-link has-text-white">
+                <span>CÓNDOR 1071</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+
+      </nav>
+    </div>
+    
     <!-- primera página -->
-    <section class="hero is-fullheight">
-      <div class="hero-head">
-          <div class="container pt-5">
-              <div class="columns is-marginless is-paddingless">
-                  <div class="column is-paddingless is-6 is-offset-1">
-                      <div class="has-text-centered-mobile"><img src="./assets/img/logo.png" width="250px" height="auto" style="padding:15px 0px;"></div>
-                  </div>
+    <section class="hero is-fullheight is-hidden-mobile">
+      
+
+      <div class="hero-head is-centered">
+          <!-- desktop -->
+          <div class="container pt-5 ">
+            <div class="columns is-marginless is-paddingless">
+              <div class="column is-paddingless is-6 is-offset-1">
+                <div class="has-text-centered-mobile"><img src="./assets/img/logo.png" width="250px" height="auto" style="padding:15px 0px;"></div>
               </div>
-          </div>
+            </div>
+          </div>          
       </div>
 
-      <div class="hero-body">
+      <div class="hero-body bg-img">
         <div class="container">
-          <div class="columns">
-            <div class="column is-5 is-offset-1 is-12-mobile">
+          <div class="columns ">
+            <div class="column is-5">
               <!-- imagen -->
-              <div>
-                <p class="MontLT has-background-black has-text-white has-text-centered is-size-4 is-size-5-mobile has-text-weight-normal p-10">STUDIO <span class="MontMd has-text-weight-bol has-text-danger">/</span> 1 Y 2 DORMITORIOS</p>
-              </div>
+              <img src="./assets/img/LOGO-PARA-HEAD.png" alt="iLeben">
+              
             </div>            
-          </div>
+          </div>         
         </div>
       </div>
 
-
-   
-
-
-
     </section>
-
-    <!-- descubre 2 nuevas formas -->
-    <section  class="hero is-fullheight">
-      <div class="hero-head">
-        <div class="is-12 is-paddingless">
-            <p class="MontLT has-background-black has-text-white has-text-centered is-size-3 is-size-5-mobile has-text-weight-normal p-10">DESCUBRE 2 NUEVAS FORMAS DE <span class="MontMd has-text-weight-bold">VIVIR</span class="has-text-weight-bold"> EN EL CENTRO</p>
-        </div>
-      </div>
-      <!-- <div class="hero-body"> -->
-        <div class="">
-          <div class="columns is-marginless is-centered">
-
-            <!-- ARGOMEDO 380 -->
-            <div class="column is-5 is-12-mobile has-text-centered has-text-centered-mobile">
-              <div>
-                <img src="./assets/img/testlogo.png" alt="">
-              </div>
-              <div class="pt-20 pb-25">
-                <p class="MontLT descubre is-size-5 is-size-6-mobile has-text-weight-normal"><span class="has-text-weight-bold">Disfruta de una gran ubicación</span> a pasos de ciclovías, centros comerciales y estación de metro Santa Isabel.</p>
-              </div>
-              <div class="is-12 is-12-touch">
-                  <div>
-                    <p class="MontLT has-background-success has-text-white has-text-centered is-size-4 is-size-5-mobile has-text-weight-normal p-10">                    
-                      ARGOMEDO 380
-                    </p>
-                  </div>
-                  <div class="vistaEntorno">                    
-                    <div><img src="./assets/img/metrostaisabel.jpg" alt=""></div>
-                  </div>
-              </div>
-              
-            </div>
-            <!-- ARGOMEDO 380 -->
-
-            <div class="pt-20 pb-25"></div>
-
-            <!-- CONDOR 1099 -->
-            <div class="column is-5 is-12-mobile has-text-centered has-text-centered-mobile">
-              <div>
-                <img src="./assets/img/testlogo.png" alt="">
-              </div>
-              <div class="pt-20 pb-25">
-                <p class="MontLT descubre is-size-5 is-size-6-mobile has-text-weight-normal"><span class="has-text-weight-bold">Conéctate con la ciudad.</span> Vive a pasos del Parque Almagro, ciclovías y estaciones de metro Toesca y Moneda</p>
-              </div>
-              <div class="is-12 is-12-mobile">
-                <p class="MontLT has-background-danger has-text-white has-text-centered is-size-4 is-size-5-mobile has-text-weight-normal p-10">                      
-                  CONDOR 1071
-                </p>
-                <div class="vistaEntorno">
-                <!-- <div class="vistaCondor is-12 is-12-mobile has-background-link radio esquina"> -->
-                  <div><img src="./assets/img/MetroMoneda.jpeg" alt=""></div>
-                </div>
-              </div>
-              
-            </div>
-            <!-- CONDOR 1099 -->            
-
-
-          </div>
-        </div>
-      <!-- </div> -->
-    </section>
-
 
     <!-- elige el modelo -->
-    <section  class="hero is-fullheight">
-      <div class="hero-head">
-        <div class="column is-12 is-paddingless">
-            <p class="MontLT has-background-black has-text-white has-text-centered is-size-3 is-size-5-mobile has-text-weight-normal p-10"><span class="MontMd has-text-weight-bold">ELIGE EL MODELO</span class="has-text-weight-bold"> QUE SE ACOMODE A TUS SUEÑOS</p>
+    <section id="s4"  class="hero is-fullheight">
+      <!-- <div class="hero-head"> -->
+        <div id="s2" class="column is-12 is-paddingless is-hidden-mobile">
+            <p class="MontLT has-background-black has-text-white has-text-centered is-size-3 is-size-5-mobile has-text-weight-normal p-10"><span class="MontMd has-text-weight-bold">VIVE</span class="has-text-weight-bold"> EN ESPACIOS QUE SE ADAPTAN A TI</p>
         </div>
-      </div>
+        <div id="mapa">
+            <div class="is-hidden-tablet" style="height: 20vh;"></div>
+        </div>
+      <!-- </div> -->
         <div class="">
           <div class="columns is-marginless is-centered">
             <!-- Argomedo -->
-            <div class="column is-5 is-12-mobile has-text-centered has-text-centered-mobile">
+            <div id="argomedo1" class="column is-5 is-12-mobile has-text-centered has-text-centered-mobile">
               <div class="is-12 is-12-mobile">
                 <!-- galeria -->
                 <div class="vistaEntorno">
                   <!-- planta 1 -->
                   <div class="slide">
-                    <img src="./assets/img/plantademo.jpg" alt="">
-                    <div class="is-12 is-12-mobile radio2 has-background-success pl-15 pt-10 pb-10 has-text-left">                        
-                      <p class="MontLT has-text-white is-size-5 interlineado has-text-weight-bold">TIPO 1</p>
-                      <p class="MontLT has-text-white is-size-6 interlineado">2 dorms. / 1 baño</p>
-                      <p class="MontLT has-text-white is-size-6 interlineado">Superficie total: XX m<span class="alcuadrado">2</span></p>                          
+                    
+                    <img src="./assets/img/MODELO-A.jpg" alt="">
+                
+                    <!-- desktop -->
+                    <div class="slide__planos has-background-success radio2 is-5 is-right radio2  pl-15 pt-10 pb-10 has-text-left is-hidden-touch">
+                      <p class="MontLT has-text-white is-size-5 interlineado has-text-weight-bold">MODELO A</p>
+                      <p class="MontLT has-text-white is-size-6 interlineado">2 dorms. / 2 baños</p>
+                      <p class="MontLT has-text-white is-size-6 interlineado">Superficie total: 53.3 m<span class="alcuadrado">2</span></p>
+                    </div>                                          
+                    
+                    <!-- mobile -->
+                    <div class="is-12 is-12-mobile radio2 has-background-success pl-15 pt-10 pb-10 has-text-left is-hidden-desktop">                        
+                      <p class="MontLT has-text-white is-size-5 interlineado has-text-weight-bold">MODELO A</p>
+                      <p class="MontLT has-text-white is-size-6 interlineado">2 dorms. / 2 baños</p>
+                      <p class="MontLT has-text-white is-size-6 interlineado">Superficie total: 53.3 m<span class="alcuadrado">2</span></p>                          
                     </div>
                   </div>
                   <!-- planta 1 -->
 
                   <!-- planta 2 -->
                   <div class="slide">
-                    <img src="./assets/img/plantademo.jpg" alt="">
-                    <div class="is-12 is-12-mobile radio2 has-background-success pl-15 pt-10 pb-10 has-text-left">                        
-                      <p class="MontLT has-text-white is-size-5 interlineado has-text-weight-bold">TIPO 2</p>
-                      <p class="MontLT has-text-white is-size-6 interlineado">2 dorms. / 1 baño</p>
-                      <p class="MontLT has-text-white is-size-6 interlineado">Superficie total: XX m<span class="alcuadrado">2</span></p>                          
+                    <img src="./assets/img/MODELO-B.jpg" alt="">
+
+                    <!-- desktop -->
+                    <div class="slide__planos has-background-success radio2 is-5 is-right radio2  pl-15 pt-10 pb-10 has-text-left is-hidden-touch">                    
+                      <p class="MontLT has-text-white is-size-5 interlineado has-text-weight-bold">MODELO B</p>
+                      <p class="MontLT has-text-white is-size-6 interlineado">2 dorms. / 2 baños</p>
+                      <p class="MontLT has-text-white is-size-6 interlineado">Superficie total: 49.21 m<span class="alcuadrado">2</span></p>                          
+                    </div>
+
+                    <!-- mmobile -->
+                    <div class="is-12 is-12-mobile radio2 has-background-success pl-15 pt-10 pb-10 has-text-left is-hidden-desktop">
+                      <p class="MontLT has-text-white is-size-5 interlineado has-text-weight-bold">MODELO B</p>
+                      <p class="MontLT has-text-white is-size-6 interlineado">2 dorms. / 2 baños</p>
+                      <p class="MontLT has-text-white is-size-6 interlineado">Superficie total: 49.21 m<span class="alcuadrado">2</span></p>                          
                     </div>
                   </div>
                   <!-- planta 2 -->
+
+                  <!-- planta 3 -->
+                  <div class="slide">
+                    <img src="./assets/img/MODELO-C.jpg" alt="">
+                    <!-- desktop -->
+                    <div class="slide__planos has-background-success radio2 is-5 is-right radio2  pl-15 pt-10 pb-10 has-text-left is-hidden-touch">
+                      <p class="MontLT has-text-white is-size-5 interlineado has-text-weight-bold">MODELO C</p>
+                      <p class="MontLT has-text-white is-size-6 interlineado">2 dorms. / 2 baños</p>
+                      <p class="MontLT has-text-white is-size-6 interlineado">Superficie total: 48.85 m<span class="alcuadrado">2</span></p>                          
+                    </div>
+
+                    <!-- mobile -->
+                    <div class="is-12 is-12-mobile radio2 has-background-success pl-15 pt-10 pb-10 has-text-left is-hidden-desktop">
+                      <p class="MontLT has-text-white is-size-5 interlineado has-text-weight-bold">MODELO C</p>
+                      <p class="MontLT has-text-white is-size-6 interlineado">2 dorms. / 2 baños</p>
+                      <p class="MontLT has-text-white is-size-6 interlineado">Superficie total: 48.85 m<span class="alcuadrado">2</span></p>                          
+                    </div>
+                  </div>
+                  <!-- planta 3 -->
+
+                  <!-- planta 4 -->
+                  <div class="slide">
+                    <img src="./assets/img/MODELO-D.jpg" alt="">
+
+                    <!-- desktop -->
+                    <div class="slide__planos has-background-success radio2 is-5 is-right radio2  pl-15 pt-10 pb-10 has-text-left is-hidden-touch">
+                      <p class="MontLT has-text-white is-size-5 interlineado has-text-weight-bold">MODELO D</p>
+                      <p class="MontLT has-text-white is-size-6 interlineado">1 dorm. + 1 baño</p>
+                      <p class="MontLT has-text-white is-size-6 interlineado">Superficie total: 37.75 m<span class="alcuadrado">2</span></p>                          
+                    </div>
+
+                    <!-- mobile -->
+                    <div class="is-12 is-12-mobile radio2 has-background-success pl-15 pt-10 pb-10 has-text-left is-hidden-desktop">
+                      <p class="MontLT has-text-white is-size-5 interlineado has-text-weight-bold">MODELO D</p>
+                      <p class="MontLT has-text-white is-size-6 interlineado">1 dorm. + 1 baño</p>
+                      <p class="MontLT has-text-white is-size-6 interlineado">Superficie total: 37.75 m<span class="alcuadrado">2</span></p>                          
+                    </div>
+                  </div>
+                  <!-- planta 4 -->
+                  <!-- planta 5 -->
+                  <div class="slide">
+                    <img src="./assets/img/MODELO-E.jpg" alt="">
+                    <!-- desktop -->
+                    <div class="slide__planos has-background-success radio2 is-5 is-right radio2  pl-15 pt-10 pb-10 has-text-left is-hidden-touch">
+                      <p class="MontLT has-text-white is-size-5 interlineado has-text-weight-bold">MODELO E</p>
+                      <p class="MontLT has-text-white is-size-6 interlineado">1 dorm. / 1 baño</p>
+                      <p class="MontLT has-text-white is-size-6 interlineado">Superficie total: 33.16 m<span class="alcuadrado">2</span></p>                          
+                    </div>
+                    <!-- mobile -->
+                    <div class="is-12 is-12-mobile radio2 has-background-success pl-15 pt-10 pb-10 has-text-left is-hidden-desktop">
+                      <p class="MontLT has-text-white is-size-5 interlineado has-text-weight-bold">MODELO E</p>
+                      <p class="MontLT has-text-white is-size-6 interlineado">1 dorm. / 1 baño</p>
+                      <p class="MontLT has-text-white is-size-6 interlineado">Superficie total: 33.16 m<span class="alcuadrado">2</span></p>                          
+                    </div>
+                  </div>
+                  <!-- planta 5 -->
+
+                  <!-- planta 6 -->
+                  <div class="slide">
+                    <img src="./assets/img/MODELO-F.jpg" alt="">
+
+                    <!-- desktop -->
+                    <div class="slide__planos has-background-success radio2 is-5 is-right radio2  pl-15 pt-10 pb-10 has-text-left is-hidden-touch">
+                      <p class="MontLT has-text-white is-size-5 interlineado has-text-weight-bold">MODELO F</p>
+                      <p class="MontLT has-text-white is-size-6 interlineado">1 dorm. / 1 baño</p>
+                      <p class="MontLT has-text-white is-size-6 interlineado">Superficie total: 32.84 m<span class="alcuadrado">2</span></p>                          
+                    </div>
+
+                    <!-- mobile -->
+                    <div class="is-12 is-12-mobile radio2 has-background-success pl-15 pt-10 pb-10 has-text-left is-hidden-desktop">
+                      <p class="MontLT has-text-white is-size-5 interlineado has-text-weight-bold">MODELO F</p>
+                      <p class="MontLT has-text-white is-size-6 interlineado">1 dorm. / 1 baño</p>
+                      <p class="MontLT has-text-white is-size-6 interlineado">Superficie total: 32.84 m<span class="alcuadrado">2</span></p>                          
+                    </div>
+                  </div>
+                  <!-- planta 6 -->
                 </div>
                 <!-- galeria -->
 
@@ -190,34 +278,129 @@
           <!-- Argomedo -->
 
           <!-- division mobile -->
-          <div class="pt-20 pb-25"></div>
+          <!-- <div class="pt-20 pb-25"></div> -->
           
           <!-- Condor -->
-          <div class="column is-5 is-12-mobile has-text-centered has-text-centered-mobile">
+          <div id="condor1" class="column is-5 is-12-mobile has-text-centered has-text-centered-mobile">
               <div class="is-12 is-12-mobile">
                 <!-- galeria -->
                 <div class="vistaEntorno">
                   <!-- planta 1 -->
                   <div class="slide">
-                    <img src="./assets/img/plantademo.jpg" alt="">
-                    <div class="is-12 is-12-mobile radio2 has-background-danger pl-15 pt-10 pb-10 has-text-left">                        
-                      <p class="MontLT has-text-white is-size-5 interlineado has-text-weight-bold">TIPO 1</p>
-                      <p class="MontLT has-text-white is-size-6 interlineado">2 dorms. / 1 baño</p>
-                      <p class="MontLT has-text-white is-size-6 interlineado">Superficie total: XX m<span class="alcuadrado">2</span></p>                          
+                    <img src="./assets/img/MODELO-A.jpg" alt="">
+
+                    <!-- desktop -->
+                    <div class="slide__planos is-12 is-12-mobile radio2 has-background-danger pl-15 pt-10 pb-10 has-text-left is-hidden-touch">
+                      <p class="MontLT has-text-white is-size-5 interlineado has-text-weight-bold">MODELO A</p>
+                      <p class="MontLT has-text-white is-size-6 interlineado">2 dorms. / 2 baños</p>
+                      <p class="MontLT has-text-white is-size-6 interlineado">Superficie total: 53.3 m<span class="alcuadrado">2</span></p>                          
+                    </div>
+                    
+                    <!-- mobile -->
+                    <div class="is-12 is-12-mobile radio2 has-background-danger pl-15 pt-10 pb-10 has-text-left is-hidden-desktop">                        
+                      <p class="MontLT has-text-white is-size-5 interlineado has-text-weight-bold">MODELO A</p>
+                      <p class="MontLT has-text-white is-size-6 interlineado">2 dorms. / 2 baños</p>
+                      <p class="MontLT has-text-white is-size-6 interlineado">Superficie total: 53.3 m<span class="alcuadrado">2</span></p>                          
                     </div>
                   </div>
                   <!-- planta 1 -->
 
                   <!-- planta 2 -->
                   <div class="slide">
-                    <img src="./assets/img/plantademo.jpg" alt="">
-                    <div class="is-12 is-12-mobile radio2 has-background-danger pl-15 pt-10 pb-10 has-text-left">                        
-                      <p class="MontLT has-text-white is-size-5 interlineado has-text-weight-bold">TIPO 2</p>
-                      <p class="MontLT has-text-white is-size-6 interlineado">2 dorms. / 1 baño</p>
-                      <p class="MontLT has-text-white is-size-6 interlineado">Superficie total: XX m<span class="alcuadrado">2</span></p>                          
+                    <img src="./assets/img/MODELO-B.jpg" alt="">
+                    
+                    <!-- desktop -->
+                    <div class="slide__planos is-12 is-12-mobile radio2 has-background-danger pl-15 pt-10 pb-10 has-text-left is-hidden-touch">
+                      <p class="MontLT has-text-white is-size-5 interlineado has-text-weight-bold">MODELO B</p>
+                      <p class="MontLT has-text-white is-size-6 interlineado">2 dorms. / 2 baños</p>
+                      <p class="MontLT has-text-white is-size-6 interlineado">Superficie total: 49.21 m<span class="alcuadrado">2</span></p>                          
+                    </div>
+                    
+                    <!-- mobile -->
+                    <div class="is-12 is-12-mobile radio2 has-background-danger pl-15 pt-10 pb-10 has-text-left is-hidden-desktop">
+                      <p class="MontLT has-text-white is-size-5 interlineado has-text-weight-bold">MODELO B</p>
+                      <p class="MontLT has-text-white is-size-6 interlineado">2 dorms. / 2 baños</p>
+                      <p class="MontLT has-text-white is-size-6 interlineado">Superficie total: 49.21 m<span class="alcuadrado">2</span></p>                          
                     </div>
                   </div>
                   <!-- planta 2 -->
+                  <!-- planta 3 -->
+                  <div class="slide">
+                    <img src="./assets/img/MODELO-C.jpg" alt="">
+                    
+                    <!-- desktop -->
+                    <div class="slide__planos is-12 is-12-mobile radio2 has-background-danger pl-15 pt-10 pb-10 has-text-left is-hidden-touch">
+                      <p class="MontLT has-text-white is-size-5 interlineado has-text-weight-bold">MODELO C</p>
+                      <p class="MontLT has-text-white is-size-6 interlineado">2 dorms. / 2 baños</p>
+                      <p class="MontLT has-text-white is-size-6 interlineado">Superficie total: 48.85 m<span class="alcuadrado">2</span></p>                          
+                    </div>
+
+                    <!-- mobile -->
+                    <div class="is-12 is-12-mobile radio2 has-background-danger pl-15 pt-10 pb-10 has-text-left is-hidden-desktop">
+                      <p class="MontLT has-text-white is-size-5 interlineado has-text-weight-bold">MODELO C</p>
+                      <p class="MontLT has-text-white is-size-6 interlineado">2 dorms. / 2 baños</p>
+                      <p class="MontLT has-text-white is-size-6 interlineado">Superficie total: 48.85 m<span class="alcuadrado">2</span></p>                          
+                    </div>
+                  </div>
+                  <!-- planta 3 -->
+
+                  <!-- planta 4 -->
+                  <div class="slide">
+                    <img src="./assets/img/MODELO-D.jpg" alt="">
+                    
+                    <!-- desktop -->
+                    <div class="slide__planos is-12 is-12-mobile radio2 has-background-danger pl-15 pt-10 pb-10 has-text-left is-hidden-touch">
+                      <p class="MontLT has-text-white is-size-5 interlineado has-text-weight-bold">MODELO D</p>
+                      <p class="MontLT has-text-white is-size-6 interlineado">1 dorm. + 1 baño</p>
+                      <p class="MontLT has-text-white is-size-6 interlineado">Superficie total: 37.75 m<span class="alcuadrado">2</span></p>                          
+                    </div>
+                    
+                    <!-- mobile -->
+                    <div class="is-12 is-12-mobile radio2 has-background-danger pl-15 pt-10 pb-10 has-text-left is-hidden-desktop">
+                      <p class="MontLT has-text-white is-size-5 interlineado has-text-weight-bold">MODELO D</p>
+                      <p class="MontLT has-text-white is-size-6 interlineado">1 dorm. + 1 baño</p>
+                      <p class="MontLT has-text-white is-size-6 interlineado">Superficie total: 37.75 m<span class="alcuadrado">2</span></p>                          
+                    </div>
+                  </div>
+                  <!-- planta 4 -->
+                  <!-- planta 5 -->
+                  <div class="slide">
+                    <img src="./assets/img/MODELO-E.jpg" alt="">
+                    
+                    <!-- desktop -->
+                    <div class="slide__planos is-12 is-12-mobile radio2 has-background-danger pl-15 pt-10 pb-10 has-text-left is-hidden-touch">
+                      <p class="MontLT has-text-white is-size-5 interlineado has-text-weight-bold">MODELO E</p>
+                      <p class="MontLT has-text-white is-size-6 interlineado">1 dorm. / 1 baño</p>
+                      <p class="MontLT has-text-white is-size-6 interlineado">Superficie total: 33.16 m<span class="alcuadrado">2</span></p>                          
+                    </div>
+                    
+                    <!-- mobile -->
+                    <div class="is-12 is-12-mobile radio2 has-background-danger pl-15 pt-10 pb-10 has-text-left is-hidden-desktop">
+                      <p class="MontLT has-text-white is-size-5 interlineado has-text-weight-bold">MODELO E</p>
+                      <p class="MontLT has-text-white is-size-6 interlineado">1 dorm. / 1 baño</p>
+                      <p class="MontLT has-text-white is-size-6 interlineado">Superficie total: 33.16 m<span class="alcuadrado">2</span></p>                          
+                    </div>
+                  </div>
+                  <!-- planta 5 -->
+
+                  <!-- planta 6 -->
+                  <div class="slide">
+                    <img src="./assets/img/MODELO-F.jpg" alt="">
+                    <!-- desktop -->
+                    <div class="slide__planos is-12 is-12-mobile radio2 has-background-danger pl-15 pt-10 pb-10 has-text-left is-hidden-touch">
+                      <p class="MontLT has-text-white is-size-5 interlineado has-text-weight-bold">MODELO F</p>
+                      <p class="MontLT has-text-white is-size-6 interlineado">1 dorm. / 1 baño</p>
+                      <p class="MontLT has-text-white is-size-6 interlineado">Superficie total: 32.84 m<span class="alcuadrado">2</span></p>                          
+                    </div>
+
+                    <!-- mobile -->
+                    <div class="is-12 is-12-mobile radio2 has-background-danger pl-15 pt-10 pb-10 has-text-left is-hidden-desktop">
+                      <p class="MontLT has-text-white is-size-5 interlineado has-text-weight-bold">MODELO F</p>
+                      <p class="MontLT has-text-white is-size-6 interlineado">1 dorm. / 1 baño</p>
+                      <p class="MontLT has-text-white is-size-6 interlineado">Superficie total: 32.84 m<span class="alcuadrado">2</span></p>                          
+                    </div>
+                  </div>
+                  <!-- planta 6 -->
                 </div>
                 <!-- galeria -->
 
@@ -239,11 +422,129 @@
       </div>
     </section>
 
+    <!-- descubre 2 nuevas formas -->
+    <section  class="hero is-fullheight">
+      <div class="hero-head">
+        <div class="is-12 is-paddingless is-hidden-mobile">
+            <p class="Seravek has-background-black has-text-white has-text-centered is-size-3 is-size-5-mobile has-text-weight-normal p-10">
+              DESCUBRE 2 NUEVAS FORMAS DE <span class="MontMd has-text-weight-bold">VIVIR</span class="has-text-weight-bold"> EN EL CENTRO
+            </p>
+        </div>
+      </div>
+      <!-- <div class="hero-body"> -->
+        <div class="">
+
+          <!-- desktop -->
+          <div class="columns is-marginless is-centered">
+            <!-- ARGOMEDO 380 -->
+            <div class="column is-5 has-text-centered is-hidden-mobile mb-24">
+              <div>
+                <img src="./assets/img/LOGO-ARGOMEDO.png" alt="">
+              </div>
+            </div>
+            <div class="column is-5 has-text-centered is-hidden-mobile">
+              <div>
+                <img src="./assets/img/LOGO-CONDOR.png" alt="">
+              </div>              
+            </div>                        
+          </div>
+          <div class="columns is-centered is-8 is-hidden-mobile">
+            <p class="Seravek descubre is-size-5 is-size-6-mobile has-text-weight-normal has-text-centered">
+              <span class="has-text-weight-bold">Conéctate con la ciudad</span>
+              gracias a la cercanía que los <span class="has-text-weight-bold">EDIFICIOS SANTO</span> tienen con ciclovías<br>
+              y estaciones de metro.  Vive en una ubicación privilegiada, rodeada de centros comerciales,<br> parques y toda la experiencia
+              que el centro ofrece.
+            </p>
+          </div>
+
+          <!-- mobile -->
+          <div class="columns is-marginless is-centered">            
+
+            <!-- ARGOMEDO 380 -->
+            <div id="argomedo0" class="column is-5 is-12-mobile has-text-centered has-text-centered-mobile">
+              <div class="is-hidden-tablet">
+                <img src="./assets/img/LOGO-ARGOMEDO.png" alt="">
+              </div>
+              <div class="pt-20 pb-25 is-hidden-tablet">
+                  <span class="has-text-weight-bold">Conéctate con la ciudad</span>
+                  gracias a la cercanía que los <span class="has-text-weight-bold">EDIFICIOS SANTO</span> tienen con ciclovías<br>
+                  y estaciones de metro.  Vive en una ubicación privilegiada, rodeada de centros comerciales,<br> parques y toda la experiencia
+                  que el centro ofrece.
+                </p>
+              </div>
+              <div class="is-12 is-12-mobile">
+                <div>                  
+                  <p class="Seravek has-background-success has-text-white has-text-centered is-size-4 is-size-5-mobile has-text-weight-normal p-10">                    
+                      <img src="./assets/img/PIN-UBICACION.png" alt="">ARGOMEDO 380
+                  </p>
+                </div>
+                <div class="vistaEntorno">                    
+                  <div class="slide">                    
+                    <img src="./assets/img/IMG-ARGOMEDO.png" alt="">
+                  </div>
+                  <div class="slide">
+                    <img src="./assets/img/metrostaisabel.png" alt="">
+                  </div>
+                </div>
+                <div class="box">
+                  <div class="has-text-left is-size-6 is-size-6-mobile has-text-weight-bold p-10">                  
+                    <li>Calle residencial en pleno centro de Santiago, cercano a locales comerciales, servicios y cafés.</li>
+                    <li>Plazas con juegos infantiles.</li>
+                    <li>Cercano a Estación Metro Santa Isabel.</li>                  
+                  </div>
+                </div>
+              </div>              
+            </div>
+            <!-- ARGOMEDO 380 -->
+
+            <!-- CONDOR 1099 -->
+            <div id="condor0" class="column is-5 is-12-mobile has-text-centered has-text-centered-mobile">
+              <div class="is-hidden-tablet">
+                <img src="./assets/img/LOGO-CONDOR.png" alt="">
+              </div>
+              <div class="pt-20 pb-25 is-hidden-tablet">                
+                  <span class="has-text-weight-bold">Conéctate con la ciudad</span>
+                  gracias a la cercanía que los <span class="has-text-weight-bold">EDIFICIOS SANTO</span> tienen con ciclovías<br>
+                  y estaciones de metro.  Vive en una ubicación privilegiada, rodeada de centros comerciales,<br> parques y toda la experiencia
+                  que el centro ofrece.
+                </p>
+              </div>
+              <div class="is-12 is-12-mobile">
+                <p class="Seravek has-background-danger has-text-white has-text-centered is-size-4 is-size-5-mobile has-text-weight-normal p-10">                      
+                    <img src="./assets/img/PIN-UBICACION.png" alt=""><span>CONDOR 1071</span>
+                </p>
+                <div class="vistaEntorno">
+                  <div class="slide">                    
+                    <img src="./assets/img/IMG-CONDOR.png" alt="">
+                  </div>                  
+                  <div class="slide">
+                    <img src="./assets/img/MetroMoneda.png" alt="">
+                  </div>
+                </div> 
+                <div class="box">
+                  <div class="has-text-left is-size-6 is-size-6-mobile has-text-weight-bold p-10">                  
+                    <li>A una cuadra de Parque Almagro, Paseo Bulnes y Juegos Diana.</li>
+                    <li>A minutos del renovado Paseo Bandera.</li>
+                    <li>Cercano a Estación de Metro Parque Almagro (L3).</li>                  
+                  </div>
+                </div>
+              </div>              
+
+            </div>
+            <!-- CONDOR 1099 -->            
+
+
+          </div>          
+        </div>
+
+      <!-- </div> -->
+    </section>
+
 
     <!-- disfruta la ubicación -->
     <section  class="hero is-fullheight">
-      <div class="hero-head">
-        <div class="column is-12 is-paddingless">
+      <div id="s3" class="hero-head">
+        <div class="column is-12 is-paddingless is-hidden-mobile">
             <p class="MontLT has-background-black has-text-white has-text-centered is-size-3 is-size-5-mobile has-text-weight-normal p-10"><span class="MontMd has-text-weight-bold">DISFRUTA</span class="has-text-weight-bold"> DE UNA UBICACIÓN PRIVILEGIADA</p>
         </div>
       </div>
@@ -258,64 +559,58 @@
           <div class="columns is-marginless is-paddingless is-centered">
                                       
               <!-- Argomedo 380 -->
-              <div class="column is-5 is-12-mobile">                    
-                  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3328.9661362090437!2d-70.64019748441297!3d-33.45018878077384!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9662c571396d1021%3A0xf92978764e17b25f!2sArgomedo+380%2C+Santiago%2C+Regi%C3%B3n+Metropolitana!5e0!3m2!1ses!2scl!4v1557157293745!5m2!1ses!2scl" width="100%" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+              <div id="argomedo2" class="column is-5 is-12-mobile">                   
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3328.9661362090437!2d-70.64019748441297!3d-33.45018878077384!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9662c571396d1021%3A0xf92978764e17b25f!2sArgomedo+380%2C+Santiago%2C+Regi%C3%B3n+Metropolitana!5e0!3m2!1ses!2scl!4v1557157293745!5m2!1ses!2scl" width="100%" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
               </div>
               
               <!-- Cóndo 1071 -->
-              <div class="column is-5 is-12-mobile">                    
-                  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3328.9587089069264!2d-70.65229918441307!3d-33.45038228077384!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9662c50bed07ae29%3A0x784a4c29b44caa00!2sC%C3%B3ndor+1071%2C+Santiago%2C+Regi%C3%B3n+Metropolitana!5e0!3m2!1ses!2scl!4v1559580330402!5m2!1ses!2scl" width="100%" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+              <div id="condor2" class="column is-5 is-12-mobile">                  
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3328.9587089069264!2d-70.65229918441307!3d-33.45038228077384!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9662c50bed07ae29%3A0x784a4c29b44caa00!2sC%C3%B3ndor+1071%2C+Santiago%2C+Regi%C3%B3n+Metropolitana!5e0!3m2!1ses!2scl!4v1559580330402!5m2!1ses!2scl" width="100%" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
               </div>
           </div>
         </div>
       <!-- </div> -->
       <div class="hero-footer">
-        <div class="column is-12 is-paddingless is-centered">
-          <p class="MontLT is-size-7 has-text-centered has-text-weight-normal p-10">Las imágenes son referenciales, según Ley 19.472.  *Valor corresponde a Modelo Studio 217, confirmar valores y condiciones en Sala de Ventas</p>
+        <div class="columns is-12 is-paddingless is-centered">
+          <p class="MontLT is-size-7 has-text-centered has-text-weight-normal p-10">(*) Valor corresponde a departamento 212. Consultar por descuentos en sala de ventas.</p>
         </div>
 
-        <div class="column is-12 is-paddingless is-hidden-mobile">
-          <div class="MontLT has-background-grey has-text-black has-text-centered is-size-6 is-size-6-mobile has-text-weight-normal p-10">
+        <div class="columns is-centered is-12 is-paddingless is-hidden-mobile has-background-grey">
+          <div class="MontLT has-text-black has-text-centered is-size-6 is-size-6-mobile has-text-weight-normal p-10 pb-10">
             <p>
-              <span class="MontMd has-text-weight-bold">CONTACTO</span> +569 5788 3612
+              <span class="MontMd has-text-weight-bold">CONTACTO</span> dalonzo@ileben.cl
               <span class="has-text-danger MontMd has-text-weight-bold">&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;</span>
-              <span class="MontMd has-text-weight-bold">OFICINA CENTRAL</span> DR. MANUEL BARROS BORGOÑO 386, PROVIDENCIA
+              <span class="MontMd has-text-weight-bold">PRÓXIMAMENTE </span>SALA DE VENTAS
             </p>
           </div>
         </div>
         <div class="column is-12 is-paddingless is-hidden-desktop">
-          <div class="MontLT has-background-grey has-text-black has-text-centered is-size-6 is-size-6-mobile has-text-weight-normal p-10">
-            <p><span class="MontMd has-text-weight-bold">CONTACTO<br></span> +569 5788 3612</p><br>
-            <p><span class="MontMd has-text-weight-bold">OFICINA CENTRAL<br></span> DR. MANUEL BARROS BORGOÑO 386, PROVIDENCIA</p>
+          <div class="MontLT has-background-grey has-text-black has-text-centered is-size-6 is-size-6-mobile has-text-weight-normal p-10 pb-10">
+            <p><span class="MontMd has-text-weight-bold">CONTACTO<br></span> dalonzo@ileben.cl</p><br>
+            <p><span class="MontMd has-text-weight-bold">PRÓXIMAMENTE<br></span>SALA DE VENTAS</p><br>
           </div>
         </div>
-        
-
+      
         <!-- logos -->
-        <div class="column is-12 is-paddingless is-centered">
-          <div class="column is-12 is-paddingless is-hidden-mobile">
-            <div class="MontLT has-background-white has-text-black has-text-centered is-size-6 is-size-6-mobile has-text-weight-normal p-10">
-              <p>
-                <a href="https://ileben.cl/" target="_blank"><span class="MontLT has-text-weight-normal is-size-2">ileben.cl&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;</span></a>
-                <a href="http://" target="_blank">IG</a>
-                <a href="http://" target="_blank">FB</a>
-                <span class="MontLT has-text-weight-normal">LebenGrupoInmobiliario</span>
-                
-              </p>
-            </div>
+        <div class="columns is-12 is-paddingless is-centered has-background-success" style="margin-bottom: 0px;">
+          <div class="column is-4 MontLT has-text-black has-text-right is-size-6 is-size-6-mobile has-text-weight-normal pt-10 is-hidden-mobile">
+            <a href="https://ileben.cl/" target="_blank"><img src="./assets/img/ILEBEN-CL.png" alt=""></a><br>
           </div>
-          <div class="column is-12 is-paddingless is-hidden-desktop">
-            <div class="MontLT has-background-white has-text-black has-text-centered is-size-6 is-size-6-mobile has-text-weight-normal p-10">
-              <p>
-                <a href="https://ileben.cl/" target="_blank">
-                  <span class="MontLT has-text-weight-normal is-size-3">ileben.cl</span>
-                </a>
-              </p>
-              <p>
-                <a href="http://" target="_blank">IG</a>
-                <a href="http://" target="_blank">FB</a>
-                <span class="MontLT has-text-weight-normal is-size-6-mobile">LebenGrupoInmobiliario</span>
-              </p>
+          <div class="column is-4 MontLT has-text-black has-text-left is-size-6 is-size-6-mobile has-text-weight-normal p-10 is-hidden-mobile">            
+            <a href="https://www.instagram.com/lebengrupoinmobiliario/" target="_blank"><img width="25px" src="./assets/img/ICONO-IG.png" alt=""></a>
+            <a href="https://www.facebook.com/lebengrupoinmobiliario/" target="_blank"><img width="25px" src="./assets/img/ICONO-FB.png" alt=""></a>
+            <span class="MontLT has-text-white has-text-weight-normal">Leben<span class="has-text-weight-bold">Grupo</span>Inmobiliario</span>
+          </div>
+        </div>
+        <div class="column is-12 is-paddingless is-hidden-desktop">
+          <div class="MontLT has-background-success has-text-black is-centered is-size-6 is-size-6-mobile has-text-weight-normal p-10">
+            <div class="MontLT has-text-black has-text-centered is-size-6 is-size-6-mobile has-text-weight-normal p-10">
+              <a href="https://ileben.cl/" target="_blank"><img src="./assets/img/ILEBEN-CL.png" alt=""></a><br>
+            </div>
+            <div class="MontLT has-text-black has-text-centered is-size-6 is-size-6-mobile has-text-weight-normal p-10">                                          
+              <a href="https://www.instagram.com/lebengrupoinmobiliario/" target="_blank"><img width="25px" src="./assets/img/ICONO-IG.png" alt=""></a>
+              <a href="https://www.facebook.com/lebengrupoinmobiliario/" target="_blank"><img width="25px" src="./assets/img/ICONO-FB.png" alt=""></a>
+              <span class="MontLT has-text-white has-text-weight-normal">Leben<span class="has-text-weight-bold">Grupo</span>Inmobiliario</span>                              
             </div>
           </div>
         </div>
@@ -324,19 +619,64 @@
         </div>
       </div>
     </section>
-
-
+    
     <script type="text/javascript" src="assets/js/jquery-3.3.1.min.js"></script>
-    <!-- <script src="assets/js/functions.js"></script> -->
-
-
 
     <!-- Slick -->
     <!-- <script src="https://code.jquery.com/jquery-2.2.0.min.js" type="text/javascript"></script> -->
     <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
     <script type="text/javascript" src="./assets/slick/slick.min.js" charset="utf-8"></script>
 
-    <script type="text/javascript">
+    <script>
+      $(document).ready(function() {
+        var userAgent = navigator.userAgent || navigator.vendor || window.opera;
+
+        if (/android/i.test(userAgent) || /iPad|iPhone|iPod/.test(userAgent)) {
+
+          $('.vistaEntorno').slick({
+            autoplay: true,
+            autoplaySpeed: 2000,
+            infinite: false,
+            dots: true,
+            slidesToShow: 1,
+            slidesToScroll: 1
+          });
+
+          $('#condor0').addClass('is-hidden-mobile');
+          $('#condor1').addClass('is-hidden-mobile');
+          $('#condor2').addClass('is-hidden-mobile');
+          $('#s4').removeClass('is-fullheight');          
+
+          // eliminar html
+          var div = document.getElementById('s2');
+          while (div.firstChild) {
+              div.removeChild(div.firstChild);
+          }
+          var div = document.getElementById('s3');
+          while (div.firstChild) {
+              div.removeChild(div.firstChild);
+          }
+        } else {
+          // eliminar html
+          var div = document.getElementById('mapa');
+          while (div.firstChild) {
+              div.removeChild(div.firstChild);
+          }
+
+          $('.vistaEntorno').slick({
+            infinite: false,
+            dots: true,
+            slidesToShow: 1,
+            slidesToScroll: 1
+          });
+        }
+        
+      });
+    </script>
+
+    <script type="text/javascript" src="./assets/js/app.js"></script>
+
+    <!-- <script type="text/javascript">
       $(document).ready(function(){
         $('.vistaEntorno').slick({
           infinite: false,
@@ -345,7 +685,7 @@
           slidesToScroll: 1
         });
       });
-    </script>
+    </script> -->
 
   </body>
 </html>

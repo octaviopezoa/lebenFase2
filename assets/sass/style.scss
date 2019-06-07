@@ -13,7 +13,7 @@ $danger: #D80129;
 $grey: #e6e6e6;
 $info: rgba(255, 255, 255, 0.9);
 $link: #8a8a8a;
-$success: #4f5d6a;
+$success: #596970;
 
 // Tamaño Fuente
 $size-1: 2.4rem;
@@ -28,12 +28,18 @@ $size-7: 0.6rem;
 @import "bulma/bulma.sass";
 
 // Fuentes
-    @font-face {
-        font-family: 'GothamPro';
-        src: url('../css/fonts/GothamPro-Medium.ttf') format('truetype');
-        font-weight: 500;
-        font-style: normal;
-    }
+@font-face {
+    font-family: 'Seravek';
+    src: url('../css/fonts/seravek.ttf') format('truetype');
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'GothamPro';
+    src: url('../css/fonts/GothamPro-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
 
 @font-face {
     font-family: 'SinkinSans700';
@@ -84,6 +90,9 @@ $size-7: 0.6rem;
     font-style: normal;
 }
 
+.Seravek {
+    font-family: "Seravek";
+}
 .GothamPM {
     font-family: "GothamPro";
 }
@@ -241,12 +250,12 @@ $size-7: 0.6rem;
 }
 
 .bg-img {
-    background-image: url('../img/fondo.jpg');
+    background-image: url('../img/fondo.png');
     background-position: left center;
     background-repeat: no-repeat;
 //     background-attachment: absolute;
 //     background-size: 1920px 770px;
-    background-size: auto 593px;
+    background-size: auto 90vh;
 }
 
 .bg-color {
@@ -260,6 +269,7 @@ $size-7: 0.6rem;
     border-bottom-right-radius: 50px;
 }
 
+
 .radio{
     border-bottom-right-radius: 50px;
 }
@@ -268,8 +278,9 @@ $size-7: 0.6rem;
 }
 
 .box {
+    border: 3px #D80129;
     border-radius: 0;
-    padding:0;
+    border-bottom-right-radius: 50px;
 } 
 
 .fondo-negro {
@@ -318,3 +329,7 @@ $size-7: 0.6rem;
 .cuadroMapa {
     border-style: outset; border-width: 1px;
 }
+
+.is-vertical-center {
+    vertical-align: middle;
+  }
